@@ -6,21 +6,86 @@
     <title>TBS Queue</title>
 </head>
 <body>
-    <div class="queue-container">
-        <h1>Current Queue</h1>
-        <ul id="queueList">
-            <li>John Doe </li>
-            <li>Jane Smith </li>  
-        </ul>
+<header class="site-header">
+    <div class="header-inner">
+        <img src="./Assets/Logo.jpg" alt="THE BIG STEPPER" class="logo">
+            <!-- Swap this span for <img src="logo.png" alt="Fade & Co. logo"> when you have your own logo -->
+            <span class="logo-text">FADE&nbsp;&amp;&nbsp;CO.</span>
+ 
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+ 
+        <nav id="siteNav">
+            <ul>
+                <li><a href="#services">Price List</a></li>
+                <li><a href="#queue">View Queue</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a class="nav-cta" href="#book">Book Now</a></li>
+            </ul>
+        </nav>
     </div>
+</header>
 
-    <div class="add-to-queue">
-        <h2>Add to Queue</h2>
-        <form id="addToQueueForm">
-            <input type="text" id="nameInput" placeholder="Enter name" required>
-            <button type="submit">Join Queue</button>
+<main>
+    <section class="queue-container">
+        <h1>Current Queue</h1>
+     <div id="cardsList">
+         <div class="queue-card">
+            <p>#1</p>
+            <p class="cardName">Musa</p>
+            <p class="hairStyle">Top fade</p>
+            <p>waiting</p>
+        </div>
+
+        <div class="queue-card">
+            <p>#2</p>
+            <p class="cardNameTwo">Thato</p>
+            <p class="hairStyleTwo">Top fade</p>
+            <p>waiting</p>
+        </div>
+
+        <div class="queue-card">
+            <p>#3</p>
+            <p class="cardNameThree">Tumi</p>
+            <p class="hairStyleThree">Top fade</p>
+            <p>waiting</p>
+        </div>
+     </div>
+        
+    </section>
+
+    <section class="add-to-queue">
+        <h2>Join the Queue</h2>
+        <br>
+        <form id="bookingForm">
+            <p>Name & Surname</p>
+              <input type="text" id="nameInput" placeholder="Enter name" required>
+
+            <br>
+
+            <p>phone Number</p>
+              <input type="text" id="phoneNumber" placeholder="Enter Phone number">
+
+            <br>
+
+            <p>Hairstyle</p>
+            <select id="style">
+                 <option value="Top Fade">Top/Tapper Fade</option>
+
+                 <option value="Skin Fade">Low Fade</option>
+
+                 <option value="Buzz Cut">Bald/Chiskop</option>
+
+                 <option value="Haircut & Beard">Haircut & Beard</option>
+            </select>
+            <button type="submit" id="submission">Join Queue</button>
         </form>
-    </div>
-    
+
+
+    </section>
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
