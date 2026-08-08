@@ -4,12 +4,23 @@ let phoneNumber = document.querySelector('#phoneNumber')
 let style = document.querySelector('#style')
 let submitButton = document.querySelector('#submission')
 
-function inputName () {
-    let nameValue = nameInput.value.toLowerCase();
-}
-function cellNumber () {
-    let phoneValue = phoneNumber.value.toLowerCase();
-}
-function hairTyle () {
-    let styleValue = style.value.toLowerCase();
-}
+let queue = [];
+
+bookingForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const nameValue = nameInput.value;
+    const phoneValue = phoneNumber.value;
+    const styleValue = style.value;
+
+    const booking = {
+        name: nameValue,
+        phone: phoneValue,
+        haircut: styleValue
+    };
+
+    queue.push(booking);
+
+    console.log(booking);
+    
+});
